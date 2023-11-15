@@ -1,12 +1,15 @@
 import React from "react";
+import Home from "../pages/Home";
 import About from "../pages/About";
 import Feedback from "../pages/Feedback";
 import Portfolio from "../pages/Portfolio";
 import Resume from "../pages/Resume";
 import Skills from "../pages/Skills";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 const routes = [
+  { path: "/", name: "Home", Component: Home },
   { path: "/about", name: "About", Component: About },
   { path: "/feedback", name: "Feedback", Component: Feedback },
   { path: "/portfolio", name: "Portfolio", Component: Portfolio },
@@ -19,9 +22,14 @@ const routeComponents = routes.map(({ path, Component }) => (
 ));
 
 function Content() {
+  const location = useLocation();
   return (
     <div className="content">
-      <Routes>{routeComponents}</Routes>
+      <AnimatePresence mode="wait">
+        <Routes key={location.pathname} location={location}>
+          {routeComponents}
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

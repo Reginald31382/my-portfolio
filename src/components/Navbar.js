@@ -16,31 +16,56 @@ const Navbar = () => {
       </NavLink>
       <ul className="nav-menu">
         <li className="nav-item">
-          <NavLink to="/about" className="nav-link">
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " activated" : "")
+            }
+          >
             <BiBarcode className="nav-icon" />
             <div className="link-text">ABOUT ME</div>
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/skills" className="nav-link">
+          <NavLink
+            to="/skills"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " activated" : "")
+            }
+          >
             <GiBullseye className="nav-icon" />
             <div className="link-text">SKILLS</div>
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/portfolio" className="nav-link">
+          <NavLink
+            to="/portfolio"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " activated" : "")
+            }
+          >
             <LuPalette className="nav-icon" />
             <div className="link-text">PORTFOLIO</div>
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/resume" className="nav-link">
+          <NavLink
+            to="/resume"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " activated" : "")
+            }
+          >
             <CgNotes className="nav-icon" />
             <div className="link-text">RESUME</div>
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/feedback" className="nav-link">
+          <NavLink
+            to="/feedback"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " activated" : "")
+            }
+          >
             <TbMessageDollar className="nav-icon" />
             <div className="link-text">FEEDBACK</div>
           </NavLink>

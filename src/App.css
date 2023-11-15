@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--white);
+  --accent: var(--white);
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+}
+
 :root {
   font-size: 16px;
   --text-primary: #b6b6b6;
@@ -85,15 +112,30 @@ span {
   font-weight: bold;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 .title {
   font-family: "Bebas Neue";
   font-size: 52px;
   font-weight: bold;
   letter-spacing: 0.1rem;
   color: var(--bg-secondary);
+}
+
+.titles {
+  font-family: "Agbalumo";
+  font-size: 60px;
+  font-weight: bolder;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  color: var(--bg-secondary);
+}
+
+.titlez {
+  font-family: "Bebas Neue";
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 0.1rem;
+  color: var(--bg-secondary);
+  overflow: hidden;
 }
 
 .img-container {
@@ -119,6 +161,7 @@ span {
 
 .paragraph {
   font-family: "Poppins";
+  color: var(--bg-secondary);
 }
 
 .about-content {
@@ -180,6 +223,21 @@ span {
       transition: color var(--transition-speed) ease;
     }
   }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }
 
 /* Small screens */
@@ -246,6 +304,10 @@ span {
       margin-top: 34rem;
       margin-left: 10rem;
     }
+  }
+
+  .home-container {
+    text-align: center;
   }
 }
 
