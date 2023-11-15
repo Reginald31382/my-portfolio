@@ -1,19 +1,29 @@
 import React from "react";
+import About from "../pages/About";
+import Feedback from "../pages/Feedback";
+import Portfolio from "../pages/Portfolio";
+import Resume from "../pages/Resume";
+import Skills from "../pages/Skills";
+import { Route, Routes } from "react-router-dom";
 
-function Content()  {
+const routes = [
+  { path: "/about", name: "About", Component: About },
+  { path: "/feedback", name: "Feedback", Component: Feedback },
+  { path: "/portfolio", name: "Portfolio", Component: Portfolio },
+  { path: "/resume", name: "Resume", Component: Resume },
+  { path: "/skills", name: "Skills", Component: Skills },
+];
+
+const routeComponents = routes.map(({ path, Component }) => (
+  <Route path={path} element={<Component />} />
+));
+
+function Content() {
   return (
     <div className="content">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <Routes>{routeComponents}</Routes>
     </div>
   );
-};
+}
 
 export default Content;

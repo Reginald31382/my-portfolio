@@ -3,26 +3,16 @@
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #232323;
-  --bg-secondary: #cfcfe6;
-  --trasition-speed: 600ms;
+  --bg-secondary: #353541;
+  --transition-speed: 600ms;
 }
 
 .navbar-container {
-  top: 0;
-  width: 5rem;
-  height: 100vh;
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width var(--trasition-speed) ease;
+  transition: width var(--transition-speed) ease;
   overflow: hidden;
-}
-
-.navbar-container:hover {
-  width: 16rem;
-}
-
-.navbar-container:hover .link-text {
-  display: inline;
+  z-index: 100;
 }
 
 .nav-menu {
@@ -45,18 +35,13 @@
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  transition: var(--trasition-speed);
+  transition: var(--transition-speed);
 }
 
 .nav-link:hover {
-  filter: grayscale(100%) opacity(1);
+  filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
-  color: rgb(112, 112, 245);
-}
-
-.content {
-  margin: auto 16rem auto;
-  padding: 1rem;
+  color: #ff3636;
 }
 
 .nav-icon {
@@ -68,4 +53,267 @@
 .link-text {
   display: none;
   margin-left: 1rem;
+  font-weight: bold;
+}
+
+.activated {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: #ff3636;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  color: #fff;
+  background: var(--bg-secondary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logo {
+  width: 4.5rem;
+  margin: 0.5rem;
+  margin-right: 2rem;
+}
+
+span {
+  color: #ff3636;
+  font-weight: bold;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.title {
+  font-family: "Bebas Neue";
+  font-size: 52px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: var(--bg-secondary);
+}
+
+.img-container {
+  position: relative;
+  left: 5rem;
+
+  img {
+    position: absolute;
+    max-height: 20rem;
+    margin: auto;
+  }
+
+  .square {
+    position: absolute;
+    border-style: solid;
+    border-color: var(--bg-secondary);
+  }
+}
+
+.drink {
+  border-radius: 10px;
+}
+
+.paragraph {
+  font-family: "Poppins";
+}
+
+.about-content {
+  display: flex;
+  height: 50rem;
+
+  img {
+    position: absolute;
+    margin-top: 10rem;
+    z-index: 1;
+  }
+
+  .circle {
+    position: absolute;
+    background: red;
+    border-radius: 50%;
+    opacity: 50%;
+    margin-top: 10rem;
+    z-index: 10;
+  }
+
+  .about-info {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-family: "Bebas Neue";
+      font-size: 52px;
+      letter-spacing: 0.1rem;
+      color: var(--bg-secondary);
+      margin: auto;
+    }
+
+    p {
+      font-family: "Poppins";
+      margin: auto;
+    }
+
+    h3 {
+      font-family: "Poppins";
+      margin: 0;
+      font-size: 2rem;
+    }
+  }
+
+  .Contact-me {
+    position: absolute;
+    z-index: 10;
+
+    .about-icon {
+      margin: 0 0.5rem 0;
+    }
+
+    .about-icon:hover {
+      color: #ff3636;
+      transition: color var(--transition-speed) ease;
+    }
+  }
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar-container {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  .navbar-logo {
+    display: none;
+  }
+  .nav-menu {
+    flex-direction: row;
+  }
+  .nav-link {
+    justify-content: center;
+  }
+  .content {
+    margin-top: 1rem;
+    .title {
+      margin-left: 2rem;
+    }
+    .img-container {
+      height: 15rem;
+
+      img {
+        max-width: 20rem;
+        top: 2rem;
+      }
+
+      .square {
+        height: 10rem;
+        width: 10rem;
+        margin-left: -2rem;
+        border-width: 0.7rem;
+      }
+    }
+    .paragraph {
+      margin-left: 1rem;
+    }
+  }
+
+  .about-content {
+    width: 100vw;
+    margin-left: 1rem;
+    img {
+      height: 23rem;
+      margin-left: 2rem;
+    }
+
+    .circle {
+      height: 8rem;
+      width: 8rem;
+      margin-left: 20rem;
+    }
+
+    .about-info {
+      margin-top: 8rem;
+      margin-left: 0rem;
+    }
+
+    .Contact-me {
+      margin-top: 34rem;
+      margin-left: 10rem;
+    }
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar-container {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+  .navbar-container:hover {
+    width: 16rem;
+  }
+  .navbar-container:hover .link-text {
+    display: inline;
+  }
+
+  .content {
+    margin: auto 16rem auto;
+    padding: 1rem;
+
+    .title {
+      margin-left: 10rem;
+    }
+    .img-container {
+      height: 25rem;
+
+      img {
+        top: 3rem;
+        left: 5rem;
+      }
+
+      .square {
+        height: 20rem;
+        width: 20rem;
+        margin-left: 2rem;
+        border-width: 1rem;
+      }
+    }
+    p {
+      margin-left: 10rem;
+    }
+  }
+
+  .about-content {
+    width: 50rem;
+    margin-left: 20rem;
+    margin-top: 5rem;
+
+    img {
+      height: 30rem;
+      margin-left: 10rem;
+    }
+
+    .circle {
+      height: 13rem;
+      width: 13rem;
+      margin-left: 33rem;
+    }
+
+    .about-info {
+      margin-top: 12rem;
+      margin-left: 7rem;
+    }
+
+    .Contact-me {
+      margin-top: 30rem;
+      margin-left: 35rem;
+    }
+  }
 }

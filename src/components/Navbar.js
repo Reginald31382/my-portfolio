@@ -4,40 +4,46 @@ import { GiBullseye } from "react-icons/gi";
 import { CgNotes } from "react-icons/cg";
 import { LuPalette } from "react-icons/lu";
 import { TbMessageDollar } from "react-icons/tb";
+import { NavLink } from "react-router-dom";
+import logo from "../images/jrome.png";
 
 const Navbar = () => {
   return (
     <div className="navbar-container">
+      <NavLink to="/" className="navbar-logo">
+        <img className="logo" src={logo} alt="jRome logo" />
+        <span>R.</span>Dixon
+      </NavLink>
       <ul className="nav-menu">
         <li className="nav-item">
-          <a className="nav-link">
+          <NavLink to="/about" className="nav-link">
             <BiBarcode className="nav-icon" />
             <div className="link-text">ABOUT ME</div>
-          </a>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link">
+          <NavLink to="/skills" className="nav-link">
             <GiBullseye className="nav-icon" />
             <div className="link-text">SKILLS</div>
-          </a>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link">
-            <CgNotes className="nav-icon" />
-            <div className="link-text">RESUME</div>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">
+          <NavLink to="/portfolio" className="nav-link">
             <LuPalette className="nav-icon" />
             <div className="link-text">PORTFOLIO</div>
-          </a>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link">
+          <NavLink to="/resume" className="nav-link">
+            <CgNotes className="nav-icon" />
+            <div className="link-text">RESUME</div>
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/feedback" className="nav-link">
             <TbMessageDollar className="nav-icon" />
             <div className="link-text">FEEDBACK</div>
-          </a>
+          </NavLink>
         </li>
       </ul>
     </div>
