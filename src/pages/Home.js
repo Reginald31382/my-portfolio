@@ -34,7 +34,15 @@ const Home = () => {
       >
         ~ by Reggie Dixon
       </m.p>
-      <p style={{ color: "black" }}>TODO: Create a random joke here</p>
+      <p
+        style={{
+          color: "red",
+          fontSize: "30px",
+          fontStyle: "italic",
+        }}
+      >
+        ~~still under construction~~
+      </p>
     </div>
   );
 };
