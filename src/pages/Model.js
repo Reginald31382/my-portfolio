@@ -28,7 +28,7 @@ function Model(props) {
         transition={transition}
       >
         <p>{props.paragraph}</p>
-        <img src={props.img} alt="me" />
+        <img src={props.img} alt="me" className="reggie" />
         <m.div
           className="square"
           initial={{ rotate: -90 }}
