@@ -152,6 +152,10 @@ span {
     position: absolute;
     border-style: solid;
     border-color: var(--bg-secondary);
+    height: 20rem;
+    width: 20rem;
+    margin-left: 2rem;
+    border-width: 1rem;
   }
 }
 
