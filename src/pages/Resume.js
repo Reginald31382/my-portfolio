@@ -1,5 +1,5 @@
 import React from "react";
-import Model from "./Model";
+import Model from "../model/Model";
 
 function Resume() {
   return (

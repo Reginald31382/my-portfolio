@@ -34,15 +34,15 @@ const Home = () => {
       >
         ~ by Reggie Dixon
       </m.p>
-      <p
+      {/* <p
         style={{
           color: "red",
           fontSize: "30px",
           fontStyle: "italic",
         }}
       >
-        ~~still under construction~~
-      </p>
+        ~~ Under Construction ~~
+      </p> */}
     </div>
   );
 };

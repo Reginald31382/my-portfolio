@@ -1,8 +1,8 @@
 import React from "react";
-import ModelOne from "./ModelOne";
+import ModelOne from "../model/ModelOne";
 import { motion as m } from "framer-motion";
 import { listItems } from "../data/data";
-import Pirate from "./Pirate";
+// import Pirate from "./Pirate";
 
 function Skills() {
   return (
@@ -31,7 +31,7 @@ function Skills() {
           ))}
         </div>
       </m.div>
-      <Pirate />
+      {/* <Pirate /> */}
     </>
   );
 }

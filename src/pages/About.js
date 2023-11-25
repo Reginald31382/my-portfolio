@@ -1,5 +1,5 @@
 import React from "react";
-import Model from "./Model";
+import Model from "../model/Model";
 import me from "../images/me.jpg";
 
 function About() {

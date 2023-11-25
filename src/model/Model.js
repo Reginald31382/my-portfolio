@@ -44,7 +44,7 @@ function Model(props) {
         exit={{ y: "100px" }}
         transition={transition}
       >
-        <p>{props.paragraph1}</p>
+        <p style={{ marginTop: "25px" }}>{props.paragraph1}</p>
         <br />
         <p>{props.paragraph2}</p>
       </m.div>
